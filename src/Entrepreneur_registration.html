@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="public/images/collab-favicon-black.png" />
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap"
@@ -21,7 +21,7 @@
       <div style="padding-left: 50px">
         <a href="index.html"
           ><img
-            src="public/images/collab-high-resolution-logo-transparent.png"
+            src="../public/images/collab-high-resolution-logo-transparent.png"
             alt="logo"
             height="50px"
             width="150px"
@@ -37,182 +37,155 @@
         <h1 class="heading_reg">Entrepreneur</h1>
         <div class="container">
           <form id="entrepreneurForm">
-            <div class="steps">
-              <div class="step" data-step="1">
-                <table>
-                  <tr>
-                    <th colspan="2">Login Credentials</th>
-                  </tr>
-                  <tr>
-                    <td>Email Address *</td>
-                    <td><input type="email" id="email" required /></td>
-                  </tr>
-                  <tr>
-                    <td>Password *</td>
-                    <td><input type="password" id="password" required /></td>
-                  </tr>
-                </table>
-              </div>
+            <table>
+              <tr>
+                <th colspan="2">Login Credentials</th>
+              </tr>
+              <tr>
+                <td>Email Address</td>
+                <td>
+                  <input type="email" id="email" required /><span
+                    id="emSpan"
+                  ></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Password</td>
+                <td><input type="password" id="password" required /></td>
+              </tr>
 
-              <div class="step" data-step="2">
-                <table>
-                  <tr>
-                    <th colspan="2">Personal Information</th>
-                  </tr>
-                  <tr>
-                    <td>Full Name</td>
-                    <td><input type="text" id="fullName" required /></td>
-                  </tr>
-                  <tr>
-                    <td>Username</td>
-                    <td><input type="text" id="username" required /></td>
-                  </tr>
-                  <tr>
-                    <td>Mobile Number</td>
-                    <td><input type="tel" id="phone" required /></td>
-                  </tr>
+              <tr>
+                <th colspan="2">Personal Information</th>
+              </tr>
+              <tr>
+                <td>Full Name</td>
+                <td><input type="text" id="fullName" required /></td>
+              </tr>
+              <tr>
+                <td>Username</td>
+                <td><input type="text" id="username" required /></td>
+              </tr>
+              <tr>
+                <td>Mobile Number</td>
+                <td><input type="tel" id="phone" required /></td>
+              </tr>
 
-                  <tr>
-                    <th colspan="2">Communication Address</th>
-                  </tr>
-                  <tr>
-                    <td>Street</td>
-                    <td><input type="text" id="street" /></td>
-                  </tr>
-                  <tr>
-                    <td>City/Town</td>
-                    <td><input type="text" id="city" /></td>
-                  </tr>
-                  <tr>
-                    <td>State</td>
-                    <td><input type="text" id="state" /></td>
-                  </tr>
-                  <tr>
-                    <td>Country</td>
-                    <td><input type="text" id="country" required /></td>
-                  </tr>
-                  <tr>
-                    <td>Pin Code</td>
-                    <td><input type="number" id="pin_code" /></td>
-                  </tr>
-                </table>
-              </div>
+              <tr>
+                <th colspan="2">Communication Address</th>
+              </tr>
+              <tr>
+                <td>Street</td>
+                <td><input type="text" id="street" /></td>
+              </tr>
+              <tr>
+                <td>City/Town</td>
+                <td><input type="text" id="city" /></td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td><input type="text" id="state" /></td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td><input type="text" id="country" required /></td>
+              </tr>
+              <tr>
+                <td>Pin Code</td>
+                <td><input type="number" id="pin_code" /></td>
+              </tr>
 
-              <div class="step" data-step="3">
-                <table>
-                  <tr>
-                    <th colspan="2">Company Details</th>
-                  </tr>
-                  <tr>
-                    <td>Company Name</td>
-                    <td><input type="text" id="companyName" required /></td>
-                  </tr>
-                  <tr>
-                    <td>Company Registration Number</td>
-                    <td>
-                      <input
-                        type="text"
-                        id="companyRegistrationNumber"
-                        required
-                      />
-                    </td>
-                  </tr>
+              <tr>
+                <th colspan="2">Company Details</th>
+              </tr>
+              <tr>
+                <td>Company Name</td>
+                <td><input type="text" id="companyName" required /></td>
+              </tr>
+              <tr>
+                <td>Company Registration Number</td>
+                <td>
+                  <input type="text" id="companyRegistrationNumber" required />
+                </td>
+              </tr>
 
-                  <tr>
-                    <td>Date of Registration</td>
-                    <td>
-                      <input type="date" id="dateOfRegistration" required />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Age of Startup</td>
-                    <td><input type="number" id="startupAge" required /></td>
-                  </tr>
-                  <tr>
-                    <td>GSTIN Number</td>
-                    <td><input type="text" id="gstinNumber" required /></td>
-                  </tr>
-                  <tr>
-                    <td>Upload PDF License</td>
-                    <td>
-                      <input
-                        type="file"
-                        id="pdfLicense"
-                        accept=".pdf"
-                        required
-                      />
-                    </td>
-                  </tr>
-                </table>
-              </div>
+              <tr>
+                <td>Date of Registration</td>
+                <td>
+                  <input type="date" id="dateOfRegistration" required />
+                </td>
+              </tr>
+              <tr>
+                <td>Age of Startup</td>
+                <td><input type="number" id="startupAge" required /></td>
+              </tr>
+              <tr>
+                <td>GSTIN Number</td>
+                <td><input type="text" id="gstinNumber" required /></td>
+              </tr>
+              <!-- <tr>
+                <td>Upload PDF License</td>
+                <td>
+                  <input type="file" id="pdfLicense" accept=".pdf" required />
+                </td>
+              </tr> -->
 
-              <div class="step" data-step="4">
-                <table>
-                  <tr>
-                    <th colspan="2">Ownership and Stakeholders</th>
-                  </tr>
-                  <tr>
-                    <td>Company Website</td>
-                    <td><textarea id="majorStakeholders"></textarea></td>
-                  </tr>
-                  <tr>
-                    <td>Major Stakeholders</td>
-                    <td><input type="url" id="companyWebsite" required /></td>
-                  </tr>
+              <tr>
+                <th colspan="2">Ownership and Stakeholders</th>
+              </tr>
+              <tr>
+                <td>Major Stakeholders</td>
+                <td><textarea id="majorStakeholders"></textarea></td>
+              </tr>
+              <tr>
+                <td>Company Website</td>
+                <td><input type="url" id="companyWebsite" required /></td>
+              </tr>
 
-                  <tr>
-                    <td>Type of Ownership</td>
-                    <td>
-                      <select name="ownership_type" id="ownership_type">
-                        <option value="Sole_proprietorship">
-                          Sole proprietorship
-                        </option>
-                        <option value="Nonprofit_corporation">
-                          Nonprofit corporation
-                        </option>
-                        <option value="Limited_company">Limited company</option>
-                        <option value="Partnership">Partnership</option>
-                        <option value=" Franchising">Franchising</option>
-                      </select>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Dilution Details</td>
-                    <td><textarea id="dilutionDetails"></textarea></td>
-                  </tr>
-                  <tr>
-                    <th colspan="2">Undertaking and Terms & Conditions</th>
-                  </tr>
-                  <tr>
-                    <td colspan="2">
-                      <input type="checkbox" id="undertaking" required />
-                      Undertaking
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="2">
-                      <input
-                        type="checkbox"
-                        id="termsAndConditions"
-                        required
-                      />Agree to Terms and Conditions
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <div class="buttons">
-              <table>
-                <tr>
-                  <td>
-                    <button id="prevBtn" onclick="changeStep(-1)">Back</button>
-                  </td>
-                  <td>
-                    <button type="submit" id="subButn" onclick="changeStep(1)">Next</button>
-                  </td>
-                </tr>
-              </table>
-            </div>
+              <tr>
+                <td>Type of Ownership</td>
+                <td>
+                  <select name="ownership_type" id="ownership_type">
+                    <option value="Sole_proprietorship">
+                      Sole proprietorship
+                    </option>
+                    <option value="Nonprofit_corporation">
+                      Nonprofit corporation
+                    </option>
+                    <option value="Limited_company">Limited company</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value=" Franchising">Franchising</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Dilution Details</td>
+                <td><textarea id="dilutionDetails"></textarea></td>
+              </tr>
+              <tr>
+                <th colspan="2">Undertaking and Terms & Conditions</th>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align: left">
+                  <input type="checkbox" id="undertaking" required />
+                  Undertaking
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align: left">
+                  <input
+                    type="checkbox"
+                    id="termsAndConditions"
+                    required
+                  />Agree to Terms and Conditions
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2">
+                  <button type="submit" id="subBtn">Submit</button>
+                </td>
+              </tr>
+            </table>
           </form>
         </div>
       </section>
@@ -245,7 +218,7 @@
         <div>
           <a href="index.html"
             ><img
-              src="public/images/collab-high-resolution-logo-transparent.png"
+              src="../public/images/collab-high-resolution-logo-transparent.png"
               alt=""
               height="60px"
               width="200px"
