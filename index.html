@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collab</title>
+    <link rel="shortcut icon" href="public/images/collab-favicon-black.png" />
+    <link  rel="stylesheet"  href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      /*Header Styles*/
+        header{
+            display: flex;
+            background-color:#fcbaa2;
+            color: rgb(64, 58, 0);
+            padding: 10px;
+            justify-content: space-between;
+            border-radius: 20px;
+
+
+        }
+        .entry{
+          padding: 15px 30px 0px 0px;
+          font-size: 20;
+          font-family: 'Inria Sans', sans-serif;
+          
+          font-weight: bold;
+
+        }
+        .entry span{
+          padding: 8px 15px 8px 15px;
+          border: 2px solid rgba(255,229,0,1);
+          border-radius: 10px;
+          margin-right: 5px;
+        }
+        /*Main Division*/
+        .main{
+         
+          display: flex;
+          justify-content: space-between;
+        }
+
+        /*Registration Styles*/
+        .Register{
+          border: 1px solid rgba(255,229,0,1);
+          width: 400px;
+          margin: 100px 50px 100px 0px;
+          padding: 15px;
+          font-family: 'Inria Sans', sans-serif;
+          background-color: rgb(246,246,246);
+          border-radius: 15px;
+         
+       
+        }
+         
+      
+        .choice-button {
+          border: 1px solid rgba(255, 229, 0, 1);
+          padding: 10px; 
+          margin-bottom: 10px; 
+          background-color: rgb(254, 254, 254);
+          font-size: 20px;
+         
+        }
+        .submit-button{
+          display: block;
+          background-color: rgb(217, 217, 217);
+          color: white;
+          padding: 10px 20px 10px 20px;
+          border: 1px solid rgb(255, 229, 0);
+          cursor: pointer;
+          font-size: 18px; 
+          font-family: 'Inria Sans', sans-serif; 
+          border-radius:50px ;
+          color: rgb(99, 98, 98);
+          margin: 0px 120px 0px 120px;
+         
+        }
+        .login-button {
+          display: block;
+          background-color: rgb(217, 217, 217);
+          color: white;
+          padding: 10px 20px 10px 20px;
+          border: 1px solid rgb(255, 229, 0);
+          cursor: pointer;
+          font-size: 18px; 
+          font-family: 'Inria Sans', sans-serif; 
+          border-radius:50px ;
+          color: rgb(99, 98, 98);
+          margin: 0px 155px 0px 155px;
+          
+         
+        }
+        /*Banner Design*/
+        .tag_line
+        {
+      
+          font-family: 'Inria Sans', sans-serif; 
+          font-size: 50px;
+          font-weight: bolder;
+          margin-top: 30px;
+          margin-left: 120px;
+          text-align: center;
+          display: flex;
+         flex-direction: column;
+         align-items: center;
+        }
+        .banner{
+            margin-left: 120px;
+        }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+    
+        
+    
+        .tag_part {
+          opacity: 0;
+          animation: fadeIn 1s ease-out forwards;
+        }
+    
+        .tag_part:nth-child(1) {
+          animation-delay: 0.5s;
+        }
+    
+        .tag_part:nth-child(2) {
+          animation-delay: 1.5s;
+        }
+
+        /*Footer Design*/
+        .footer-top
+        {
+          background-color:#fcbaa2;
+          margin: 20px 0px 15px 0px;
+          display: flex;
+          justify-content: space-between;
+          border-top: 2px solid rgba(255,229,0,1);
+          border-radius: 20px;
+          padding:30px 100px 15px 100px ;
+          border-bottom: 2px solid rgba(255,229,0,1);
+          font-family: 'Inria Sans', sans-serif; 
+        }
+
+        .footer-bottom
+        {
+          text-align: center;
+          margin-bottom: 20px;
+          font-family: 'Inria Sans', sans-serif; 
+        }
+        .bi-instagram,.bi-facebook,.bi-youtube{
+          padding: 2px;
+          margin-top: 50px;
+          color: rgb(77, 77, 77);
+          
+        }
+        
+
+        
+        
+    </style>
+</head>
+  </head> 
+  <body>
+    <header>
+        <div style="padding-left: 50px;">
+           <a href="index.html"><img src="public/images/collab-high-resolution-logo-transparent.png" alt="logo" height="50px" width="150px"></a>
+        </div>
+        <div class="entry">
+            <span>Login</span>
+            <span>Sign up</span>
+        </div>
+    </header>
+    <main>
+    <section>
+      
+      <div  class="main">     
+         <div class="About">
+          <div class="tag_line">
+            <span class="tag_part">Fuel Your Startup's Growth</span>
+            <span class="tag_part">Elevate Your Skills</span>
+          </div>
+          <span class="banner"><img src="public/images/entrepreneurs-gathered-to-shake-hands.jpg" alt="" height="450px" width="700px"></span>
+         </div>
+
+
+         <div class="Register">
+          <form id="registrationForm">
+            <h2>Welcome...</h2>
+            
+            <div class="choice-button">
+              <input type="radio" class="Entrepreneur" id="choiceEntrepreneur" name="userType" value="1">
+              <label for="choiceEntrepreneur">I'm an <b>Entrepreneur</b>, registering for Startup.</label>
+            </div>
+            
+            <div class="choice-button">
+              <input type="radio" class="Freelancer" id="choiceFreelancer" name="userType" value="2">
+              <label for="choiceFreelancer">I'm a <b>Freelancer</b>, looking for work</label>
+            </div>
+            
+            <div class="choice-button">
+              <input type="radio" class="Investor" id="choiceInvestor" name="userType" value="3">
+              <label for="choiceInvestor">I'm an <b>Investor</b>, looking for investment in Startups</label>
+            </div>
+            
+            <div class="submit">
+              <input type="button" class="submit-button" value="Create Account" onclick="openSelectedPage()">
+              <br>
+              <input type="button" class="login-button" value="Log In" onclick="openSelectedPage()">
+            </div>
+          </form>
+        </div>
+
+      </div>
+      </div>
+  
+    </section>
+  </main>
+    <footer>
+      <div class="footer-top">
+        <div>
+          <span><b>Contact Us</b></span>
+          <address>
+            UPSIDC INDUSTRIAL AREA, NAINI, ALLAHABAD, U.P., 211010 <br>
+            Phone : 0532-2402951-55 <br>
+            Toll Free No : 1800 3131 808 <br>
+            Email ID : <a href="mailto:info@united.ac.in">info@united.ac.in</a>
+          </address>
+        </div>
+        <div>
+          <span><b>Follow Us</b></span><br>
+          <a href="twitter.com/theugiindia"><span class="bi bi-instagram"></span></a>
+          <a href="facebook.com/theugiindia"><span class="bi-facebook"></span></a>
+          <a href="https://www.youtube.com/@theugiindia"><span class="bi-youtube"></span></a>
+        </div>
+        <div>
+          <a href="index.html"><img src="public/images/collab-high-resolution-logo-transparent.png" alt="" height="60px" width="200px"></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="bi-c-circle"></span>
+        <span>2023 Team <b>Collab</b> all right Reserved</span>
+      </div>
+    </footer>
+    <script>
+      function openSelectedPage() {
+        // Get the selected value from the radio buttons
+        var userType = document.querySelector('input[name="userType"]:checked');
+      
+        if (userType) {
+          // Determine the URL based on the selected user type
+          var url;
+          switch (userType.value) {
+            case "1":
+              url = "src/Entrepreneur_registration.html";
+              break;
+            case "2":
+              url = "src/Freelancer_registration.html";
+              break;
+            case "3":
+              url = "src/Investor_Registration.html";
+              break;
+            default:
+             
+              url = "index.html";
+          }
+      
+          // Open the selected page
+          window.location.href = url;
+        } else {
+          alert("Please select a user type before submitting.");
+        }
+      }
+      </script>
+      
+  </body>
+</html>
+
