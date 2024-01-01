@@ -22,7 +22,7 @@
   <body>
     <header>
       <div style="padding-left: 50px">
-        <a href="index.html"
+        <a href="../index.html"
           ><img
             src="../public/images/collab-high-resolution-logo-transparent.png"
             alt="logo"
@@ -31,42 +31,44 @@
         /></a>
       </div>
       <div class="entry">
-        <span>Login</span>
-        <span>Sign up</span>
+        <span><a href="freelancerLogin.html">Login</a>
+         
+        </span>
+        <span><a href="Freelancer_registration.html">Sign up</a></span>
       </div>
     </header>
     <main>
       <section>
         <h1 class="heading_reg">Freelancer</h1>
         <div class="container">
-          <form id="freelancerForm">
+          <form id="freelancerForm" action="http://localhost:5500/freelancer/register" method="post">
             <table>
               <tr>
                 <th colspan="2">Account Information</th>
               </tr>
               <tr>
-                <td>Email Address</td>
-                <td><input type="email" id="email" required /></td>
+                <td>Email Address*<span id="emailValid"></span></td>
+                <td><input type="email" id="email" name="email" required /></td>
               </tr>
               <tr>
-                <td>Password</td>
-                <td><input type="password" id="password" required /></td>
+                <td>Password*</td>
+                <td><input type="password" id="password" name="password" required /></td>
               </tr>
 
               <tr>
                 <th colspan="2">Personal Information</th>
               </tr>
               <tr>
-                <td>Full Name</td>
-                <td><input type="text" id="fullName" required /></td>
+                <td>Full Name*</td>
+                <td><input type="text" id="fullName" name="name" required /></td>
               </tr>
               <tr>
-                <td>Username</td>
-                <td><input type="text" id="username" required /></td>
+                <td>Username*</td>
+                <td><input type="text" id="username" name="username" required /></td>
               </tr>
               <tr>
-                <td>Mobile Number</td>
-                <td><input type="tel" id="phone" required /></td>
+                <td>Mobile Number*</td>
+                <td><input type="tel" id="phone" name="phone" required /></td>
               </tr>
 
               <tr>
@@ -74,23 +76,23 @@
               </tr>
               <tr>
                 <td>Street</td>
-                <td><input type="text" id="street" /></td>
+                <td><input type="text" id="street" name="street" /></td>
               </tr>
               <tr>
                 <td>City/Town</td>
-                <td><input type="text" id="city" /></td>
+                <td><input type="text" id="city" name="city" /></td>
               </tr>
               <tr>
                 <td>State</td>
-                <td><input type="text" id="state" /></td>
+                <td><input type="text" id="state" name="state" /></td>
               </tr>
               <tr>
                 <td>Country</td>
-                <td><input type="text" id="country" required /></td>
+                <td><input type="text" id="country" name="country" required /></td>
               </tr>
               <tr>
                 <td>Pin Code</td>
-                <td><input type="number" id="pin_code" /></td>
+                <td><input type="number" id="pin_code" name="pincode" /></td>
               </tr>
 
               <tr>
@@ -98,29 +100,36 @@
               </tr>
               <tr>
                 <td>Job Title</td>
-                <td><input type="text" id="jobTitle" required /></td>
+                <td><input type="text" id="jobTitle" name="jobTitle" /></td>
               </tr>
               <tr>
-                <td>Skills</td>
-                <td><input type="text" id="skills" required /></td>
+                <td>Skills*</td>
+                <td><input type="text" id="skills" name="skills" required /></td>
               </tr>
               <tr>
-                <td>Portfolio Link</td>
-                <td><input type="url" id="portfolio" /></td>
+                <td>Portfolio Link*</td>
+                <td><input type="url" id="portfolio" name="portfolio" required/></td>
               </tr>
               <tr>
-                <td>Linkdln Profile</td>
-                <td><input type="url" id="linkdln" /></td>
+                <td>Linkdln Profile*</td>
+                <td><input type="url" id="linkdln" name="linkdln" required /></td>
               </tr>
               <tr>
-                <td>Years of Experience</td>
-                <td><input type="number" id="experience" required /></td>
+                <td>Years of Experience*</td>
+                <td><select id="experience" name="yearofExperience" required>
+                   <option value="Fresher">Fresher</option>
+                   <option value="1+">1+</option>
+                   <option value="2+">2+</option>
+                   <option value="3+">3+</option>
+                   <option value="5+">5+</option>
+                   <option value="10+">10+</option>
+                </select></td>
               </tr>
               <tr>
-                <td>Week work hour</td>
-                <td><input type="number" id="workHours" required /></td>
+                <td>Week work hour*</td>
+                <td><input type="number" id="workHours" name="workhours" required /></td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>Rate Type</td>
                 <td>
                   <select id="rateType" required>
@@ -132,27 +141,34 @@
               <tr>
                 <td>Rate</td>
                 <td><input type="number" id="rate" required /></td>
-              </tr>
+              </tr> -->
 
               <tr>
                 <th colspan="2">Payment Information</th>
               </tr>
               <tr>
-                <td>Bank Name</td>
-                <td><input type="text" id="bank_name" required /></td>
+                <td>Bank Name*</td>
+                <td><input type="text" id="bank_name" name="bankName" required /></td>
               </tr>
               <tr>
-                <td>Account Number</td>
+                <td>Account Number*</td>
                 <td>
-                  <input type="number" id="account_number" required />
+                  <input type="number" id="account_number" name="accountNumber" required />
                 </td>
               </tr>
               <tr>
-                <td>IFSC Code</td>
-                <td><input type="text" name="" id="IFSC_code" /></td>
+                <td>IFSC Code*</td>
+                <td><input type="text" id="IFSC_code" name="IFSCcode" /></td>
               </tr>
               <tr>
-                <td colspan="2">
+                <td colspan="2" style="text-align: left">
+                  <input type="checkbox" id="undertaking" required />
+                  Undertaking
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2" style="text-align: left">
                   <input type="checkbox" id="terms" required /> Agree to Terms
                   and Conditions
                 </td>
@@ -160,7 +176,13 @@
 
               <tr>
                 <td colspan="2">
-                  <button type="submit" id="subBtn">Submit</button>
+                  <button
+                    type="submit"
+                    id="subBtn"
+                    
+                  >
+                    Submit
+                  </button>
                 </td>
               </tr>
             </table>
@@ -194,7 +216,7 @@
           ></a>
         </div>
         <div>
-          <a href="index.html"
+          <a href="../index.html"
             ><img
               src="../public/images/collab-high-resolution-logo-transparent.png"
               alt=""
@@ -208,6 +230,6 @@
         <span>2023 Team <b>Collab</b> all right Reserved</span>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
   </body>
 </html>

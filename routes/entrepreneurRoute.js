@@ -3,5 +3,5 @@ const router = express.Router();
 const {registerUser,authUser}=require('../controllers/entrepreneurController.js')
 const {protectEntrepreneur}=require('../middleware/authMiddleware.js')
 router.route('/register').post(registerUser);
-router.route('/login').get(authUser);
+router.route('/login').post(authUser);
 module.exports = router;

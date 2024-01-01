@@ -22,7 +22,7 @@
   <body>
     <header>
       <div style="padding-left: 50px">
-        <a href="index.html"
+        <a href="../index.html"
           ><img
             src="../public/images/collab-high-resolution-logo-transparent.png"
             alt="logo"
@@ -31,42 +31,44 @@
         /></a>
       </div>
       <div class="entry">
-        <span>Login</span>
-        <span>Sign up</span>
+        <span><a href="investorLogin.html">Login</a>
+         
+        </span>
+        <span><a href="Investor_registration.html">Sign up</a></span>
       </div>
     </header>
     <main>
       <section>
         <h1 class="heading_reg">Investor</h1>
         <div class="container">
-          <form id="freelancerForm">
+          <form id="investorForm" action="http://localhost:5500/investor/register" method="post">
             <table>
               <tr>
                 <th colspan="2">Login Credentials</th>
               </tr>
               <tr>
                 <td>Email Address *</td>
-                <td><input type="email" id="email" required /></td>
+                <td><input type="email" id="email" name="email" required /></td>
               </tr>
               <tr>
                 <td>Password *</td>
-                <td><input type="password" id="password" required /></td>
+                <td><input type="password" id="password" name="password" required /></td>
               </tr>
 
               <tr>
                 <th colspan="2">Personal Information</th>
               </tr>
               <tr>
-                <td>Full Name</td>
-                <td><input type="text" id="fullName" required /></td>
+                <td>Full Name*</td>
+                <td><input type="text" id="fullName" name="name" required /></td>
               </tr>
               <tr>
-                <td>Username</td>
-                <td><input type="text" id="username" required /></td>
+                <td>Username*</td>
+                <td><input type="text" id="username" name="username" required /></td>
               </tr>
               <tr>
-                <td>Mobile Number</td>
-                <td><input type="tel" id="phone" required /></td>
+                <td>Mobile Number*</td>
+                <td><input type="tel" id="phone" name="phone" required /></td>
               </tr>
 
               <tr>
@@ -74,75 +76,75 @@
               </tr>
               <tr>
                 <td>Street</td>
-                <td><input type="text" id="street" /></td>
+                <td><input type="text" id="street" name="street" /></td>
               </tr>
               <tr>
                 <td>City/Town</td>
-                <td><input type="text" id="city" /></td>
+                <td><input type="text" id="city" name="city" /></td>
               </tr>
               <tr>
                 <td>State</td>
-                <td><input type="text" id="state" /></td>
+                <td><input type="text" id="state" name="state"/></td>
               </tr>
               <tr>
                 <td>Country</td>
-                <td><input type="text" id="country" required /></td>
+                <td><input type="text" id="country" name="country"/></td>
               </tr>
               <tr>
                 <td>Pin Code</td>
-                <td><input type="number" id="pin_code" /></td>
+                <td><input type="number" id="pin_code" name="pincode"/></td>
               </tr>
 
               <tr>
                 <th colspan="2">Company Details</th>
               </tr>
               <tr>
-                <td>Company Name</td>
-                <td><input type="text" id="companyName" required /></td>
+                <td>Company Name*</td>
+                <td><input type="text" id="companyName" name="companyName" required /></td>
               </tr>
               <tr>
-                <td>GST Number</td>
-                <td><input type="text" id="gstNumber" required /></td>
+                <td>GST Number*</td>
+                <td><input type="text" id="gstNumber" name="gstNumber" required /></td>
               </tr>
               <tr>
-                <td>Details of Registration</td>
+                <td>Details of Registration*</td>
                 <td>
-                  <textarea id="registrationDetails" required></textarea>
+                  <textarea id="registrationDetails" name="registrationDetails" required></textarea>
                 </td>
               </tr>
               <tr>
-                <td>Legal License</td>
-                <td><input type="text" id="legalLicense" required /></td>
+                <td>Legal License Number*</td>
+                <td><input type="text" id="legalLicense" name="legalLicense" required /></td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>Upload PDF License</td>
                 <td>
                   <input type="file" id="pdfLicense" accept=".pdf" required />
                 </td>
-              </tr>
+              </tr>-->
 
               <tr>
                 <th colspan="2">Business Summary</th>
               </tr>
               <tr>
-                <td>Business Summary</td>
-                <td><textarea id="businessSummary" required></textarea></td>
+                <td>About Business*</td>
+                <td><textarea id="aboutBusiness" name="aboutBusiness" required></textarea></td>
               </tr>
               <tr>
                 <th colspan="2">Investment Capacity</th>
               </tr>
               <tr>
-                <td>Minimum Investment Capacity</td>
+                <td>Minimum Investment Capacity*</td>
                 <td>
-                  <input type="number" id="minInvestment" required />
+                  <input type="number" id="minInvestment" name="minInvestment" required />
                 </td>
               </tr>
               <tr>
-                <td>Maximum Investment Capacity</td>
-                <td><input type="number" id="maxInvestment" required /></td>
+                <td>Maximum Investment Capacity*</td>
+                <td><input type="number" id="maxInvestment" name="maxInvestment" required /></td>
               </tr>
 
-              <tr>
+              <!-- <tr>
                 <th colspan="2">Top 3 Interests</th>
               </tr>
               <tr>
@@ -158,18 +160,18 @@
               <tr>
                 <td>Interest 3</td>
                 <td><input type="text" id="interest3" required /></td>
-              </tr>
+              </tr>-->
               <tr>
                 <th colspan="2">Undertaking and Terms & Conditions</th>
               </tr>
               <tr>
-                <td colspan="2">
+                <td colspan="2" style="text-align: left">
                   <input type="checkbox" id="undertaking" required />
                   Undertaking
                 </td>
               </tr>
               <tr>
-                <td colspan="2">
+                <td colspan="2" style="text-align: left">
                   <input
                     type="checkbox"
                     id="termsAndConditions"
@@ -179,11 +181,8 @@
               </tr>
 
               <tr>
-                <td>
-                  <button id="prevBtn" onclick="changeStep(-1)">Back</button>
-                </td>
-                <td>
-                  <button id="nextBtn" onclick="changeStep(1)">Next</button>
+                <td colspan="2">
+                  <button type="submit" id="subBtn" >Submit</button>
                 </td>
               </tr>
             </table>
@@ -217,7 +216,7 @@
           ></a>
         </div>
         <div>
-          <a href="index.html"
+          <a href="../index.html"
             ><img
               src="../public/images/collab-high-resolution-logo-transparent.png"
               alt=""
@@ -231,6 +230,6 @@
         <span>2023 Team <b>Collab</b> all right Reserved</span>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
   </body>
 </html>

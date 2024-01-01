@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const entrepreneurSchema = mongoose.Schema({
-    name: { type: String, required: true },
     email: { type: String, required: true,unique:true, },
     password: { type: String, required: true },
+    name: { type: String, required: true },
+    username: { type: String, required: true },
+   
     pic: {
         type: String,
         required: true,
@@ -35,10 +37,11 @@ const entrepreneurSchema = mongoose.Schema({
         type:String,
         required:true
     },
-    company:{
+    companyName:{
         type:String,
         required:true
     },
+
     companyregno:{
         type:String,
         required:true
@@ -55,23 +58,20 @@ const entrepreneurSchema = mongoose.Schema({
         type:String,
         required:true
     },
-    // stakeholder:{
-    //     type:String,
-    //     required:true
-    // },
+    stakeholder:{
+         type:String,
+         required:true
+     },
     companyurl:{
         type:String,
         required:true
     },
-    stakeholder:{
-        type:String,
-        required:true
-    },
+   
     ownershiptype:{
         type:String,
         required:true
     },
-    dillutiondetail:{
+    dilutiondetail:{
         type:String,
         required:true
     },

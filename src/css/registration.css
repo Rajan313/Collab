@@ -14,11 +14,13 @@ header {
 
   font-weight: bold;
 }
-.entry span {
+.entry span a {
+  text-decoration: none;
   padding: 8px 15px 8px 15px;
   border: 2px solid rgba(255, 229, 0, 1);
   border-radius: 10px;
   margin-right: 5px;
+  color: rgb(64, 58, 0);
 }
 
 /*Footer Design*/

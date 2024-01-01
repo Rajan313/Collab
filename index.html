@@ -171,10 +171,10 @@
         <div style="padding-left: 50px;">
            <a href="index.html"><img src="public/images/collab-high-resolution-logo-transparent.png" alt="logo" height="50px" width="150px"></a>
         </div>
-        <div class="entry">
+        <!-- <div class="entry">
             <span>Login</span>
             <span>Sign up</span>
-        </div>
+        </div> -->
     </header>
     <main>
     <section>
@@ -209,9 +209,9 @@
             </div>
             
             <div class="submit">
-              <input type="button" class="submit-button" value="Create Account" onclick="openSelectedPage()">
+              <input type="button" class="submit-button" value="Create Account" onclick="registration()">
               <br>
-              <input type="button" class="login-button" value="Log In" onclick="openSelectedPage()">
+              <input type="button" class="login-button" value="Log In" onclick="login()">
             </div>
           </form>
         </div>
@@ -248,35 +248,52 @@
       </div>
     </footer>
     <script>
-      function openSelectedPage() {
-        // Get the selected value from the radio buttons
-        var userType = document.querySelector('input[name="userType"]:checked');
-      
-        if (userType) {
-          // Determine the URL based on the selected user type
-          var url;
-          switch (userType.value) {
-            case "1":
-              url = "src/Entrepreneur_registration.html";
-              break;
-            case "2":
-              url = "src/Freelancer_registration.html";
-              break;
-            case "3":
-              url = "src/Investor_Registration.html";
-              break;
-            default:
-             
-              url = "index.html";
-          }
-      
-          // Open the selected page
-          window.location.href = url;
-        } else {
-          alert("Please select a user type before submitting.");
+      function registration() {
+      var userType = document.querySelector('input[name="userType"]:checked');
+      if (userType) {
+        var url;
+        switch (userType.value) {
+          case '1':
+            url = 'src/Entrepreneur_registration.html';
+            break;
+          case '2':
+            url = 'src/Freelancer_registration.html';
+            break;
+          case '3':
+            url = 'src/Investor_Registration.html';
+            break;
+          default:
+            url = 'index.html';
         }
+        window.location.href = url;
+      } else {
+        alert('Please select a user type before submitting.');
       }
-      </script>
+    }
+
+    function login() {
+      var userType = document.querySelector('input[name="userType"]:checked');
+      if (userType) {
+        var url;
+        switch (userType.value) {
+          case '1':
+            url = 'src/entrepreneurLogin.html';
+            break;
+          case '2':
+            url = 'src/freelancerLogin.html';
+            break;
+          case '3':
+            url = 'src/investorLogin.html';
+            break;
+          default:
+            url = 'index.html';
+        }
+        window.location.href = url;
+      } else {
+        alert('Please select a user type before submitting.');
+      }
+    }
+  </script>
       
   </body>
 </html>

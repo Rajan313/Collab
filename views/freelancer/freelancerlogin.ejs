@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collab</title>
+    <link rel="shortcut icon" href="public/images/collab-favicon-black.png" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/registration.css" />
+  </head>
+
+  <body>
+    <header>
+      <div style="padding-left: 50px">
+        <a href="../index.html"
+          ><img
+            src="../public/images/collab-high-resolution-logo-transparent.png"
+            alt="logo"
+            height="50px"
+            width="150px"
+        /></a>
+      </div>
+      <div class="entry">
+        <span><a href="freelancerLogin.html">Login</a>
+         
+        </span>
+        <span><a href="Freelancer_registration.html">Sign up</a></span>
+      </div>
+    </header>
+    <main style="height: 365px;">
+      <section>
+        <h1 class="heading_reg">Freelancer</h1>
+        <div class="container">
+          <form  id="FreelancerLogin"action="http://localhost:5500/freelancer/login" method="post">
+            <table>
+              <tr>
+                <th colspan="2">Login Credentials</th>
+              </tr>
+              <tr>
+                <td for="email">Email Address</td>
+                <td>
+                  <input type="email" id="email" name="email" required />
+                  <!-- <span
+                    id="emSpan"
+                  ></span> -->
+                </td>
+              </tr>
+              <tr>
+                <td password="password">Password</td>
+                <td><input type="password" id="password" name="password" required /></td>
+              </tr>
+
+              
+             
+              <tr>
+                <td colspan="2">
+                  <button
+                    type="submit"
+                    id="loginBtn"
+                   
+                  >
+                    Login
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <div>
+          <span><b>Contact Us</b></span>
+          <address>
+            UPSIDC INDUSTRIAL AREA, NAINI, ALLAHABAD, U.P., 211010 <br />
+            Phone : 0532-2402951-55 <br />
+            Toll Free No : 1800 3131 808 <br />
+            Email ID : <a href="mailto:info@united.ac.in">info@united.ac.in</a>
+          </address>
+        </div>
+        <div>
+          <span><b>Follow Us</b></span
+          ><br />
+          <a href="twitter.com/theugiindia"
+            ><span class="bi bi-instagram"></span
+          ></a>
+          <a href="facebook.com/theugiindia"
+            ><span class="bi-facebook"></span
+          ></a>
+          <a href="https://www.youtube.com/@theugiindia"
+            ><span class="bi-youtube"></span
+          ></a>
+        </div>
+        <div>
+          <a href="../index.html"
+            ><img
+              src="../public/images/collab-high-resolution-logo-transparent.png"
+              alt=""
+              height="60px"
+              width="200px"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="bi-c-circle"></span>
+        <span>2023 Team <b>Collab</b> all right Reserved</span>
+      </div>
+    </footer>
+    <!-- <script src="js/script.js"></script> -->
+  </body>
+</html>
+
+
+ 

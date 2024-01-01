@@ -19,7 +19,7 @@
   <body>
     <header>
       <div style="padding-left: 50px">
-        <a href="index.html"
+        <a href="../index.html"
           ><img
             src="../public/images/collab-high-resolution-logo-transparent.png"
             alt="logo"
@@ -28,15 +28,17 @@
         /></a>
       </div>
       <div class="entry">
-        <span>Login</span>
-        <span>Sign up</span>
+        <span><a href="EntrepreneurLogin.html">Login</a>
+         
+        </span>
+        <span><a href="Entrepreneur_registration.html">Sign up</a></span>
       </div>
     </header>
     <main>
       <section>
         <h1 class="heading_reg">Entrepreneur</h1>
         <div class="container">
-          <form id="entrepreneurForm">
+          <form id="entrepreneurForm" action="http://localhost:5500/entrepreneur/register" method="post">
             <table>
               <tr>
                 <th colspan="2">Login Credentials</th>
@@ -44,14 +46,15 @@
               <tr>
                 <td>Email Address</td>
                 <td>
-                  <input type="email" id="email" required /><span
+                  <input type="email" id="email" name="email" required />
+                  <!-- <span
                     id="emSpan"
-                  ></span>
+                  ></span> -->
                 </td>
               </tr>
               <tr>
                 <td>Password</td>
-                <td><input type="password" id="password" required /></td>
+                <td><input type="password" id="password" name="password" required /></td>
               </tr>
 
               <tr>
@@ -59,15 +62,15 @@
               </tr>
               <tr>
                 <td>Full Name</td>
-                <td><input type="text" id="fullName" required /></td>
+                <td><input type="text" id="fullName" name="name" /></td>
               </tr>
               <tr>
                 <td>Username</td>
-                <td><input type="text" id="username" required /></td>
+                <td><input type="text" id="username" name="username" required /></td>
               </tr>
               <tr>
                 <td>Mobile Number</td>
-                <td><input type="tel" id="phone" required /></td>
+                <td><input type="tel" id="phone" name="phone" required /></td>
               </tr>
 
               <tr>
@@ -75,23 +78,23 @@
               </tr>
               <tr>
                 <td>Street</td>
-                <td><input type="text" id="street" /></td>
+                <td><input type="text" id="street" name="street" /></td>
               </tr>
               <tr>
                 <td>City/Town</td>
-                <td><input type="text" id="city" /></td>
+                <td><input type="text" id="city" name="city"/></td>
               </tr>
               <tr>
                 <td>State</td>
-                <td><input type="text" id="state" /></td>
+                <td><input type="text" id="state" name="state" /></td>
               </tr>
               <tr>
                 <td>Country</td>
-                <td><input type="text" id="country" required /></td>
+                <td><input type="text" id="country" name="country" required /></td>
               </tr>
               <tr>
                 <td>Pin Code</td>
-                <td><input type="number" id="pin_code" /></td>
+                <td><input type="number" id="pin_code" name="pincode" /></td>
               </tr>
 
               <tr>
@@ -99,28 +102,28 @@
               </tr>
               <tr>
                 <td>Company Name</td>
-                <td><input type="text" id="companyName" required /></td>
+                <td><input type="text" id="companyName" name="companyName" required /></td>
               </tr>
               <tr>
                 <td>Company Registration Number</td>
                 <td>
-                  <input type="text" id="companyRegistrationNumber" required />
+                  <input type="text" id="companyRegistrationNumber" name="companyregno" required />
                 </td>
               </tr>
 
               <tr>
                 <td>Date of Registration</td>
                 <td>
-                  <input type="date" id="dateOfRegistration" required />
+                  <input type="date" id="dateOfRegistration" name="dateofreg" required />
                 </td>
               </tr>
               <tr>
                 <td>Age of Startup</td>
-                <td><input type="number" id="startupAge" required /></td>
+                <td><input type="number" id="startupAge" name="ageofstartup" required /></td>
               </tr>
               <tr>
                 <td>GSTIN Number</td>
-                <td><input type="text" id="gstinNumber" required /></td>
+                <td><input type="text" id="gstinNumber" name="gstin" required /></td>
               </tr>
               <!-- <tr>
                 <td>Upload PDF License</td>
@@ -134,17 +137,17 @@
               </tr>
               <tr>
                 <td>Major Stakeholders</td>
-                <td><textarea id="majorStakeholders"></textarea></td>
+                <td><textarea id="majorStakeholders" name="stakeholder"></textarea></td>
               </tr>
               <tr>
-                <td>Company Website</td>
-                <td><input type="url" id="companyWebsite" required /></td>
+                <td>Company Website*</td>
+                <td><input type="url" id="companyWebsite" name="companyurl" required /></td>
               </tr>
 
               <tr>
                 <td>Type of Ownership</td>
                 <td>
-                  <select name="ownership_type" id="ownership_type">
+                  <select  id="ownership_type" name="ownershiptype" required>
                     <option value="Sole_proprietorship">
                       Sole proprietorship
                     </option>
@@ -159,7 +162,7 @@
               </tr>
               <tr>
                 <td>Dilution Details</td>
-                <td><textarea id="dilutionDetails"></textarea></td>
+                <td><textarea id="dilutionDetails" name="dilutiondetail"></textarea></td>
               </tr>
               <tr>
                 <th colspan="2">Undertaking and Terms & Conditions</th>
@@ -182,7 +185,13 @@
 
               <tr>
                 <td colspan="2">
-                  <button type="submit" id="subBtn">Submit</button>
+                  <button
+                    type="submit"
+                    id="subBtn"
+                   
+                  >
+                    Submit
+                  </button>
                 </td>
               </tr>
             </table>
@@ -216,7 +225,7 @@
           ></a>
         </div>
         <div>
-          <a href="index.html"
+          <a href="../index.html"
             ><img
               src="../public/images/collab-high-resolution-logo-transparent.png"
               alt=""
@@ -230,6 +239,6 @@
         <span>2023 Team <b>Collab</b> all right Reserved</span>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
   </body>
 </html>
